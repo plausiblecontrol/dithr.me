@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dithr Me | Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(2px); /* Optional: adds to the dithering effect */
+            z-index: -1;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 200;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            max-width: 600px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; letter-spacing: 6px; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="content">
+        <h1>Dithr Me</h1>
+        <p>You can't fight your online presence, so just dilute it.</p>
+    </div>
+
+</body>
+</html>
